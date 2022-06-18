@@ -1,0 +1,20 @@
+<div>
+    <div class="bg-light">
+        <div class="rubrica">
+            <div class="quitSection">
+                <a class="quitButton ms-4" href=""><b>Quit</b></a>
+            </div>
+            <div *ngFor="let contact of contacts">
+                <button class="btn d-flex contactBtn" (click)="returContact(contact)">
+                    <img src="{{contact.photo}}" width="30px"/>{{contact.name}}
+                </button>
+            </div>
+        </div>
+        <div class="rigthElemnt">
+            <div class="chatbox">
+                <app-chatbox [selectContact]="selectContact"></app-chatbox>
+            </div>
+        </div>
+        
+    </div>
+</div>

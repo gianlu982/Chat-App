@@ -1,0 +1,50 @@
+<div *ngIf="selectContact" class="heder">
+    <div class="d-flex">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="{{selectContact.photo}}" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            </button>
+            <h3>{{selectContact.name}}</h3>
+    </div>
+</div>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <img src="{{selectContact.photo}}">
+          <h5 class="modal-title" id="exampleModalLabel">{{selectContact.name}}</h5>
+        </div>
+        <div class="modal-body">
+            <p>
+                City: {{selectContact.city}}
+            </p>
+            <p>
+                Telephone-number: {{selectContact.phone}}
+            </p>
+            <p>
+                Email: {{selectContact.email}}
+            </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div  class="chatMessage">
+  <div *ngIf="selectContact">
+    <div *ngFor="let texMess of selectContact.messageText" [ngClass]="texMess.side? 'messageRight':'messageLeft'">
+        <button class="noHover">{{texMess.text}}</button>
+    </div>    
+  </div>
+</div>
+
+<div *ngIf="selectContact" class="sendChat">
+    <div>
+        <input name="send" id="send" #message placeholder="Scrivi messaggio..." (keyup.enter)="sendMessage(message.value);message.value=''"><button id="sendButton" (click)="sendMessage(message.value);message.value=''"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </button>
+    </div>
+</div>

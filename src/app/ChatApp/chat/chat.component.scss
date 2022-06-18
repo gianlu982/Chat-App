@@ -1,0 +1,63 @@
+.quitSection{
+    height: 10%;
+    width: 100%;
+    float: left;
+    background-color: #79c7c5;
+}
+
+.quitButton{
+    color: white;
+    padding: 16px;
+}
+
+.rubrica{
+    text-align: center;
+    height: 100vh;
+    width: 25%;
+    float: left;
+    background-color: lightgray;
+    overflow-y: auto;
+}
+
+.chatbox{
+    float: right;
+    height:100vh;
+    width: 75%;
+    background-color: #def8f4;
+}
+
+.contactBtn{
+    width: 100%;
+    background-color: #a1e2d9;
+    border-radius: 2%;
+    border-top: 1px solid #79c7c5;
+    border-bottom: 1px solid #79c7c5;
+    padding: 10px;
+}
+
+.contactBtn:hover{
+    background-color: white;
+    text-decoration: underline;
+}
+
+/* Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb{
+    background-color: #a1e2d9;
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #79c7c5;
+}
